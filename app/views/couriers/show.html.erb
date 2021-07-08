@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @courier.sender.full_name %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @courier.weight %>
+</p>
+
+<p>
+  <strong>Service type:</strong>
+  <%= @courier.service_type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @courier.price %>
+</p>
+
+<p>
+  <strong>Payment mode:</strong>
+  <%= @courier.payment_mode %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @courier.status %>
+</p>
+
+<p>
+  <strong>Uniq ID:</strong>
+  <%= @courier.serial_no %>
+</p>
+
+
+<%#= link_to 'Edit', edit_courier_path(@courier) %> |
+<%= link_to 'Home', root_path %>

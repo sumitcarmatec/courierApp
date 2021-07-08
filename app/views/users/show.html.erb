@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @user.full_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>Mobile no:</strong>
+  <%= @user.mobile_no %>
+</p>
+
+<p>
+  <strong>Pin code:</strong>
+  <%= @user.pin_code %>
+</p>
+<% if @method_name == 'new' %>
+  <%= link_to 'Fill Receiver details', receiver_users_path %> |
+<% elsif @method_name == 'receiver' %>
+  <%= link_to 'Fill Parsal Details', new_courier_path %> |
+<% end %>
+<%= link_to 'Home', root_path %>

@@ -1,0 +1,49 @@
+<%= form_with(model: courier) do |form| %>
+  <% if courier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(courier.errors.count, "error") %> prohibited this courier from being saved:</h2>
+
+      <ul>
+        <% courier.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!--   <div class="field">
+    <%#= form.label :user_id %>
+    <%#= form.text_field :user_id %>
+  </div>
+ -->
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.text_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_type %>
+    <%#= form.number_field :service_type %>
+    <%= form.select(:service_type, ["speed_post", "ragular"], {}, { :class => 'my_style_class' }) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payment_mode %>
+    <%#= form.number_field :payment_mode %>
+    <%= form.select(:payment_mode, ["COD", "prepaid"], {}, { :class => 'my_style_class' }) %>
+  </div>
+
+<!--   <div class="field">
+    <%#= form.label :status %>
+    <%#= form.number_field :status %>
+  </div> -->
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

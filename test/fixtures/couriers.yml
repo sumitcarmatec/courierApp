@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  weight: 
+  service_type: 1
+  price: 1.5
+  payment_mode: 1
+  status: 1
+
+two:
+  user: two
+  weight: 
+  service_type: 1
+  price: 1.5
+  payment_mode: 1
+  status: 1
